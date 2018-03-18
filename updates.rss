@@ -1,0 +1,16 @@
+<rss version="2.0">
+<channel><title>RSSOwlnix</title>
+<link>https://github.com/Xyrio/RSSOwlnix</link>
+<description>RSSOwlnix Updates Feed</description>
+
+<item>
+	<author>RSSOwlnix</author>
+	<pubDate>2018-03-18T20:30:00.000Z</pubDate>
+	<title>2.5.0-beta released</title>
+	<link>https://github.com/Xyrio/RSSOwlnix/releases</link>
+</item>
+
+</channel>
+</rss>
+
+
