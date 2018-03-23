@@ -4,6 +4,13 @@
 <description>RSSOwlnix Updates Feed</description>
 
 <item>
+    <guid>3</guid>
+	<author>RSSOwlnix</author>
+	<pubDate>2018-03-24T00:00:00.000Z</pubDate>
+	<title>wiki: how to build RSSOwlnix,Addons,Translations</title>
+	<link>https://github.com/Xyrio/RSSOwlnix/wiki/How-To-Build</link>
+</item>
+<item>
     <guid>2</guid>
 	<author>RSSOwlnix</author>
 	<pubDate>2018-03-22T19:52:00.000Z</pubDate>
