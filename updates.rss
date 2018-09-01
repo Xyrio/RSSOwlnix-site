@@ -4,6 +4,15 @@
 <description>RSSOwlnix Updates Feed</description>
 
 <item>
+    <guid>5</guid>
+	<author>RSSOwlnix</author>
+	<pubDate>2018-09-01T00:00:00.000Z</pubDate>
+	<title>mac users possible solution for startup problem</title>
+	<link>https://github.com/Xyrio/RSSOwlnix/issues/4</link>
+	<description>may have to remove all extended attributes: xattr -c RSSOwlnix.app<br/>
+	for more see: https://github.com/Xyrio/RSSOwlnix/issues/4</description>
+</item>
+<item>
     <guid>4</guid>
 	<author>RSSOwlnix</author>
 	<pubDate>2018-08-24T00:00:00.000Z</pubDate>
@@ -28,7 +37,7 @@
 	<author>RSSOwlnix</author>
 	<pubDate>2018-03-18T20:30:00.000Z</pubDate>
 	<title>2.5.0-beta released</title>
-	<link>https://github.com/Xyrio/RSSOwlnix/releases</link>
+	<link>https://github.com/Xyrio/RSSOwlnix/releases/tag/2.5.0</link>
 </item>
 
 </channel>
