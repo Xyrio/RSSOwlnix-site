@@ -6,6 +6,13 @@
 <item>
     <guid>6</guid>
 	<author>RSSOwlnix</author>
+	<pubDate>2018-10-14T00:00:00.000Z</pubDate>
+	<title>2.6.1-beta released (manual download required and replace old one)</title>
+	<link>https://github.com/Xyrio/RSSOwlnix/releases/tag/2.6.1</link>
+</item>
+<item>
+    <guid>6</guid>
+	<author>RSSOwlnix</author>
 	<pubDate>2018-09-28T00:00:00.000Z</pubDate>
 	<title>2.6.0-beta released (manual download required and replace old one)</title>
 	<link>https://github.com/Xyrio/RSSOwlnix/releases/tag/2.6.0</link>
