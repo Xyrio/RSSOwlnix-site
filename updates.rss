@@ -4,6 +4,18 @@
 <description>RSSOwlnix Updates Feed</description>
 
 <item>
+	<guid>https://codepen.io/Xyrio/full/dXaApv</guid>
+	<author>Xyrio</author>
+	<pubDate>2020-09-03T00:00:00.000Z</pubDate>
+	<title>how to create temporary youtube playlist from news</title>
+	<link>https://codepen.io/Xyrio/full/dXaApv</link>
+	<description>
+select multple news and drag and drop them into the input field.
+link: https://codepen.io/Xyrio/full/dXaApv
+source: https://codepen.io/Xyrio/pen/dXaApv
+	</description>
+</item>
+<item>
 	<guid>https://github.com/Xyrio/RSSOwlnix/releases/tag/2.8.0</guid>
 	<author>RSSOwlnix</author>
 	<pubDate>2020-06-04T00:00:00.000Z</pubDate>
