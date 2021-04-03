@@ -1,0 +1,135 @@
+<!-- example input:
+http://www.youtube.com/watch?v=a1A
+http://www.youtube.com/watch?v=b1A
+http://www.youtube.com/watch?v=c1A&feature=youtube_gdata
+
+#comments prefixed with hashtag
+#http://www.youtube.com/watch?v=d1A&feature=youtube_gdata
+
+http://www.youtube.com/watch?v=e1A
+http://www.youtube.com/watch?v=f1A
+-->
+
+<html>
+<head>
+    <title>Youtube Playlist Generator</title>
+<style>
+body {
+    font-family: helvetica;
+    background-color:#444;
+    color:#fff;
+    font-size:90%;
+}
+
+.ref-link {
+    padding:1px 8px;
+}
+
+.gen-link, .no-link {
+    background:#222;
+    width:90%;
+    padding:8px 5%;
+    display:block;
+    border-top:1px solid #111;
+    border-bottom:1px solid #111;
+    border-radius:8px;
+    text-align:center;
+}
+
+a:link{color:#88f}
+a:hover,a:hover:visited{color:#44f}
+a:active,a:active:visited{color:#f00}
+a:visited{color:#66c}
+
+.instructions {
+    margin: auto;
+    display:block;
+    padding:25px;
+    text-align:center;
+}
+
+textarea {
+    width:80%;
+    margin: auto;
+    display:block;
+    padding:4px;
+    background:#333;
+    color:#fff;
+    border:1px solid #eee;
+} textarea:active,textarea:focus {
+    border: 1px solid #aaa;
+}
+
+.createButton {
+    margin: auto;
+    display:block;
+    background:#333;
+    color:#fff;
+    padding:4px;
+    border-radius:2px;
+    border:1px solid #aaa;
+    font-size:110%;
+}
+
+#playlistLinks {
+    margin: auto;
+    display:block;
+}
+</style>
+</head>
+
+<body>
+<a class="ref-link" href="http://codepen.io/Xyrio/pen/dXaApv">online version (codepen.io)</a>
+<a class="ref-link" href="https://jsfiddle.net/915ajd0z/">online version (not-split)(jsfiddle.net)</a>
+<a class="ref-link" href="https://jsfiddle.net/zuk8b94p/">online version (jsfiddle.net)</a>
+<a class="ref-link" href="https://jsitor.com/w62RpEeTm4">online version (jsitor.com)</a>
+
+<span class="instructions">Paste a list of Youtube URL's below (limit normal 50, embed 199) to create a playlist.</span>
+
+<p><textarea name="youtubeUrls" id="youtubeUrls" cols="30" rows="10"></textarea></p>
+<br/><div id="playlistLinks"></div><br/>
+<button class="createButton">Create Playlist</button>
+</body>
+
+<script type="text/javascript">
+//<![CDATA[
+
+function getYoutubeVideoIds(text) {
+    let urls = text.split("\n")
+    let ids = []
+    for (i in urls) {
+		let id = urls[i]
+        if (!id.startsWith("#") && id.toLowerCase().indexOf("/watch?v=") >= 0) {
+            id = id.split("\/watch?v=")[1]
+			if (id.indexOf("&") > 0) {
+				id = id.split("&")[0];
+			}
+            ids.push(id);
+        }
+    }
+	return ids;
+}
+function createLink(prefix, ids) {
+        let url = prefix+ids.join(",")
+        return '<a class="gen-link" href="'+url+'">'+url+'</a>';
+};
+
+function createLinks() {
+	linksVideos = document.querySelector("#youtubeUrls").value
+	containerLinks = document.querySelector("#playlistLinks")
+	idsVideos = getYoutubeVideoIds(linksVideos)
+	if (idsVideos.length > 0) {
+		linkPlaylists = []
+		linkPlaylists.push(createLink("https://www.youtube.com/watch_videos?video_ids=",idsVideos))
+		linkPlaylists.push(createLink("http://www.youtube.com/embed/?playlist=",idsVideos))
+		containerLinks.innerHTML = linkPlaylists.join("<br>\n")
+	} else {
+		containerLinks.innerHTML = '<span class="no-link">missing youtube links</span>'
+	}
+}
+
+document.querySelector(".createButton").addEventListener ("click", createLinks, false);
+
+//]]>
+</script>
+</html>
