@@ -4,6 +4,13 @@
 <description>RSSOwlnix Updates Feed</description>
 
 <item>
+	<guid>https://github.com/Xyrio/RSSOwlnix/releases/tag/2.9.0</guid>
+	<author>RSSOwlnix</author>
+	<pubDate>2021-04-18T00:00:00.000Z</pubDate>
+	<title>2.9.0-beta released (manual download required and replace old one)</title>
+	<link>https://github.com/Xyrio/RSSOwlnix/releases/tag/2.9.0</link>
+</item>
+<item>
 	<guid>https://xyrio.github.io/RSSOwlnix-site/tools/ytlinks2ytplaylist/</guid>
 	<author>Xyrio</author>
 	<pubDate>2021-04-04T00:00:00.000Z</pubDate>
