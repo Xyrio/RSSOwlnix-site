@@ -98,13 +98,28 @@ function getYoutubeVideoIds(text) {
     let urls = text.split("\n")
     let ids = []
     for (i in urls) {
-		let id = urls[i]
-        if (!id.startsWith("#") && id.toLowerCase().indexOf("/watch?v=") >= 0) {
-            id = id.split("\/watch?v=")[1]
-			if (id.indexOf("&") > 0) {
-				id = id.split("&")[0];
+		let url = urls[i]
+		let id = null
+        if (!url.startsWith("#")) {
+			if (url.toLowerCase().indexOf("/watch?v=") >= 0) {
+				id = url.split("\/watch?v=")[1]
+				if (id.indexOf("&") > 0) {
+					id = id.split("&")[0];
+				}
+			} else if (url.toLowerCase().indexOf("/shorts/") >= 0) {
+				id = url.split("\/shorts\/")[1]
+				if (id.indexOf("?") > 0) {
+					id = id.split("?")[0];
+				}
+			} else if(url.toLowerCase().indexOf("youtu.be\/") >= 0) {
+				id = url.split("youtu.be\/")[1]
+				if (id.indexOf("?") > 0) {
+					id = id.split("?")[0];
+				}
 			}
-            ids.push(id);
+			if (id) {
+				ids.push(id);
+			}
         }
     }
 	return ids;
